@@ -70,6 +70,11 @@ nav a {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
+    transition: 0.3s;
+}
+
+#servicios article:hover {
+    transform: translateY(-5px);
 }
 
 #testimonios {
