@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1e3a5f;
+    color: white;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+#inicio {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f4f8fb;
+}
+
+#inicio h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#inicio p {
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+#inicio a {
+    display: inline-block;
+    background-color: #1e3a5f;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#servicios {
+    padding: 60px 20px;
+}
+
+#servicios h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#servicios article {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+#testimonios {
+    padding: 60px 20px;
+    background-color: #f4f8fb;
+}
+
+#testimonios h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+blockquote {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    border-left: 5px solid #1e3a5f;
+    font-style: italic;
+}
+
+#testimonios p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#contacto {
+    padding: 60px 20px;
+}
+
+#contacto h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    margin-top: 20px;
+    background-color: #1e3a5f;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #16304f;
+}
+
+footer {
+    background-color: #1e3a5f;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #inicio h1 {
+        font-size: 2rem;
+    }
+
+}
