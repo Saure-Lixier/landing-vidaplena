@@ -231,12 +231,139 @@ button:hover::before {
 footer {
     background-color: #061A24;
     color: white;
+    padding: 50px 20px 30px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    color: #A6D5CA;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer-section h3:hover {
+    color: #4B6F76;
+}
+
+.footer-section p {
+    margin-bottom: 12px;
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+address {
+    font-style: normal;
+}
+
+address a {
+    color: #A6D5CA;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+address a:hover {
+    color: #4B6F76;
+    transform: translateX(3px);
+}
+
+.icon {
+    font-size: 1.2rem;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-links a {
+    color: #A6D5CA;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.social-links a:hover {
+    color: #4B6F76;
+    transform: translateX(5px);
+}
+
+.footer-desc {
+    color: #A6D5CA;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-divider {
+    max-width: 1200px;
+    margin: 30px auto;
+    border: none;
+    border-top: 1px solid rgba(166, 213, 202, 0.2);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
-    padding: 30px 20px;
+    font-size: 0.9rem;
+    color: #A6D5CA;
 }
 
 footer p {
     margin: 10px 0;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    footer {
+        padding: 40px 15px 25px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-section {
+        min-width: 100%;
+    }
+
+    .footer-section h3 {
+        font-size: 1rem;
+    }
+
+    .social-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .social-links a {
+        font-size: 0.9rem;
+    }
 }
 
 section {
