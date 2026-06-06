@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Habilita scroll suave para anclas internas (pref. CSS). Compatible con navegadores móviles modernos. */
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -193,3 +197,4 @@ section {
     border-radius: 8px;
     margin-bottom: 15px;
 }
+
