@@ -3,14 +3,78 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --bg: #F2E7D5;
+    --surface: #F7EDE1;
+    --surface-alt: #E7D7C2;
+    --text: #2E3B33;
+    --text-muted: #667069;
+    --header: #43594A;
+    --footer: #2B3B33;
+    --primary: #5D8264;
+    --primary-dark: #3E5F4A;
+    --primary-light: #9DBEA9;
+    --accent: #C4A77C;
+    --accent-soft: #DBCEB6;
+    --desert-bg: #D4B88A;
+    --desert-bg-dark: #A7855E;
+    --card: #FFFFFF;
+    --card-alt: #F4ECE4;
+    --testimonial-bg: #FFFFFF;
+    --testimonial-border: #5D8264;
+    --button-text: #FFFFFF;
+    --button-hover: #4D735A;
+    --input-bg: #F7EDE1;
+    --input-border: #B8A58A;
+    --shadow: rgba(46, 59, 51, 0.12);
+    --shadow-strong: rgba(46, 59, 51, 0.18);
+    --link: #5D8264;
+    --link-hover: #47654E;
+    --hr: rgba(93, 130, 100, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #121B16;
+        --surface: #1E2D24;
+        --surface-alt: #263631;
+        --text: #E4E9E3;
+        --text-muted: #A3B3A6;
+        --header: #1E2D24;
+        --footer: #15221A;
+        --primary: #699077;
+        --primary-dark: #4C735D;
+        --primary-light: #8BB099;
+        --accent: #A98B63;
+        --accent-soft: #6B8B72;
+        --desert-bg: #3F311F;
+        --desert-bg-dark: #2F2418;
+        --card: #1F2E27;
+        --card-alt: #273830;
+        --testimonial-bg: #22322A;
+        --testimonial-border: #699077;
+        --button-text: #F2F6EF;
+        --button-hover: #5F7C69;
+        --input-bg: #1F2E27;
+        --input-border: #4F6A57;
+        --shadow: rgba(0, 0, 0, 0.25);
+        --shadow-strong: rgba(0, 0, 0, 0.35);
+        --link: #A6D5CA;
+        --link-hover: #C5E2D6;
+        --hr: rgba(166, 213, 202, 0.15);
+    }
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: var(--bg);
+    color: var(--text);
 }
 
 header {
-    background-color: #061A24;
-    color: white;
+    background-color: var(--header);
+    color: var(--button-text);
     padding: 20px;
 }
 
@@ -27,7 +91,7 @@ nav ul {
 }
 
 nav a {
-    color: white;
+    color: var(--button-text);
     text-decoration: none;
     position: relative;
     transition: color 0.3s ease;
@@ -40,12 +104,12 @@ nav a::after {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #A6D5CA, #4B6F76);
+    background: linear-gradient(90deg, var(--primary-light), var(--primary));
     transition: width 0.3s ease;
 }
 
 nav a:hover {
-    color: #A6D5CA;
+    color: var(--primary-light);
 }
 
 nav a:hover::after {
@@ -55,7 +119,7 @@ nav a:hover::after {
 #inicio {
     text-align: center;
     padding: 80px 20px;
-    background-color: #A6D5CA;
+    background-color: var(--surface);
 }
 
 #inicio h1 {
@@ -70,12 +134,12 @@ nav a:hover::after {
 
 #inicio a {
     display: inline-block;
-    background: linear-gradient(135deg, #0B4158 0%, #4B6F76 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    color: var(--button-text);
     padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(6, 26, 36, 0.3);
+    box-shadow: 0 4px 10px var(--shadow);
     transition: 0.3s;
 }
 
@@ -86,23 +150,23 @@ nav a:hover::after {
 
 #servicios {
     padding: 60px 20px;
-    background: linear-gradient(to bottom, #3D2817 0%, #4A3728 100%);
+    background: linear-gradient(to bottom, var(--desert-bg), var(--desert-bg-dark));
 }
 
 #servicios h2 {
     text-align: center;
     margin-bottom: 30px;
-    color: #000000;
+    color: var(--text);
 }
 
 #servicios article {
-    background: linear-gradient(135deg, #4B6F76 0%, #0B4158 100%);
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-dark) 100%);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    color: white;
-    box-shadow: 0 4px 8px rgba(6, 26, 36, 0.2);
+    color: var(--button-text);
+    box-shadow: 0 4px 8px var(--shadow);
 }
 
 #servicios article:hover {
@@ -112,7 +176,7 @@ nav a:hover::after {
 
 #testimonios {
     padding: 60px 20px;
-    background-color: #A6D5CA;
+    background-color: var(--surface-alt);
 }
 
 #testimonios h2 {
@@ -121,39 +185,39 @@ nav a:hover::after {
 }
 
 blockquote {
-    background-color: white;
+    background-color: var(--testimonial-bg);
     padding: 20px;
     margin: 20px auto;
     max-width: 700px;
-    border-left: 5px solid #0B4158;
+    border-left: 5px solid var(--primary-dark);
     font-style: italic;
-    color: #061A24;
-    box-shadow: 0 2px 6px rgba(6, 26, 36, 0.25);
+    color: var(--text);
+    box-shadow: 0 2px 6px var(--shadow);
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 blockquote:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(6, 26, 36, 0.15);
-    border-left-color: #A6D5CA;
+    border-left-color: var(--primary-light);
 }
 
 #testimonios p {
     text-align: center;
     margin-bottom: 20px;
     font-weight: bold;
-    color: #061A24;
+    color: var(--text);
 }
 
 #contacto {
     padding: 60px 20px;
-    background-color: #1B5E4F;
+    background-color: var(--primary-dark);
 }
 
 #contacto h2 {
     text-align: center;
     margin-bottom: 30px;
-    color: #A6D5CA;
+    color: var(--primary-light);
 }
 
 form {
@@ -165,44 +229,44 @@ label {
     display: block;
     margin-top: 15px;
     margin-bottom: 5px;
-    color: #A6D5CA;
+    color: var(--text-muted);
 }
 
 input,
 textarea {
     width: 100%;
     padding: 10px;
-    border: 2px solid #4B6F76;
+    border: 2px solid var(--input-border);
     border-radius: 5px;
     font-size: 1rem;
-    background-color: #061A24;
-    color: white;
+    background-color: var(--input-bg);
+    color: var(--text);
     transition: all 0.3s ease;
 }
 
 input:hover,
 textarea:hover {
-    border-color: #A6D5CA;
+    border-color: var(--primary-light);
     box-shadow: 0 0 6px rgba(166, 213, 202, 0.15);
 }
 
 input:focus,
 textarea:focus {
     outline: none;
-    border-color: #A6D5CA;
+    border-color: var(--primary-light);
     box-shadow: 0 0 12px rgba(166, 213, 202, 0.4);
     transform: scale(1.01);
 }
 
 button {
     margin-top: 20px;
-    background: linear-gradient(135deg, #0B4158 0%, #4B6F76 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    color: var(--button-text);
     border: none;
     padding: 12px 20px;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(6, 26, 36, 0.3);
+    box-shadow: 0 4px 10px var(--shadow);
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
     overflow: hidden;
@@ -221,7 +285,7 @@ button::before {
 
 button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 18px rgba(6, 26, 36, 0.4);
+    box-shadow: 0 8px 18px var(--shadow-strong);
 }
 
 button:hover::before {
@@ -229,8 +293,8 @@ button:hover::before {
 }
 
 footer {
-    background-color: #061A24;
-    color: white;
+    background-color: var(--footer);
+    color: var(--button-text);
     padding: 50px 20px 30px;
     margin-top: 60px;
 }
@@ -250,7 +314,7 @@ footer {
 }
 
 .footer-section h3 {
-    color: #A6D5CA;
+    color: var(--primary-light);
     margin-bottom: 20px;
     font-size: 1.1rem;
     font-weight: 600;
@@ -258,7 +322,7 @@ footer {
 }
 
 .footer-section h3:hover {
-    color: #4B6F76;
+    color: var(--primary);
 }
 
 .footer-section p {
@@ -272,7 +336,7 @@ address {
 }
 
 address a {
-    color: #A6D5CA;
+    color: var(--link);
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-flex;
@@ -281,7 +345,7 @@ address a {
 }
 
 address a:hover {
-    color: #4B6F76;
+    color: var(--link-hover);
     transform: translateX(3px);
 }
 
@@ -297,7 +361,7 @@ address a:hover {
 }
 
 .social-links a {
-    color: #A6D5CA;
+    color: var(--link);
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     display: inline-flex;
@@ -307,12 +371,12 @@ address a:hover {
 }
 
 .social-links a:hover {
-    color: #4B6F76;
+    color: var(--primary);
     transform: translateX(5px);
 }
 
 .footer-desc {
-    color: #A6D5CA;
+    color: var(--primary-light);
     font-size: 0.95rem;
     line-height: 1.6;
 }
@@ -321,7 +385,7 @@ address a:hover {
     max-width: 1200px;
     margin: 30px auto;
     border: none;
-    border-top: 1px solid rgba(166, 213, 202, 0.2);
+    border-top: 1px solid var(--hr);
 }
 
 .footer-bottom {
@@ -329,7 +393,7 @@ address a:hover {
     margin: 0 auto;
     text-align: center;
     font-size: 0.9rem;
-    color: #A6D5CA;
+    color: var(--primary-light);
 }
 
 footer p {
@@ -420,10 +484,10 @@ section {
 }
 
 aside {
-    background: linear-gradient(to bottom, #3D2817 0%, #4A3728 100%);
+    background: linear-gradient(to bottom, var(--desert-bg), var(--desert-bg-dark));
     padding: 30px 20px;
     text-align: center;
-    color: #A6D5CA;
+    color: var(--button-text);
     font-weight: bold;
     margin-top: 20px;
 }
@@ -432,6 +496,6 @@ aside p {
     max-width: 800px;
     margin: 0 auto;
     font-size: 1.1rem;
-    color: white;
+    color: var(--button-text);
 }
 
