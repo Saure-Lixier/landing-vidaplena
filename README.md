@@ -72,6 +72,8 @@ landing-vidaplena
 
 - Estilos personalizados mediante CSS.
 
+---
+
 ### 1. Estructura semántica HTML
 
 **Objetivo:** Construir una Landing Page utilizando etiquetas semánticas de HTML5.
