@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #1e3a5f;
+    background-color: #061A24;
     color: white;
     padding: 20px;
 }
@@ -34,7 +34,7 @@ nav a {
 #inicio {
     text-align: center;
     padding: 80px 20px;
-    background-color: #f4f8fb;
+    background-color: #A6D5CA;
 }
 
 #inicio h1 {
@@ -49,28 +49,39 @@ nav a {
 
 #inicio a {
     display: inline-block;
-    background-color: #1e3a5f;
+    background: linear-gradient(135deg, #0B4158 0%, #4B6F76 100%);
     color: white;
     padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(6, 26, 36, 0.3);
+    transition: 0.3s;
+}
+
+#inicio a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(6, 26, 36, 0.4);
 }
 
 #servicios {
     padding: 60px 20px;
+    background: linear-gradient(to bottom, #3D2817 0%, #4A3728 100%);
 }
 
 #servicios h2 {
     text-align: center;
     margin-bottom: 30px;
+    color: #000000;
 }
 
 #servicios article {
-    background-color: #f8f8f8;
+    background: linear-gradient(135deg, #4B6F76 0%, #0B4158 100%);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
     transition: 0.3s;
+    color: white;
+    box-shadow: 0 4px 8px rgba(6, 26, 36, 0.2);
 }
 
 #servicios article:hover {
@@ -79,7 +90,7 @@ nav a {
 
 #testimonios {
     padding: 60px 20px;
-    background-color: #f4f8fb;
+    background-color: #A6D5CA;
 }
 
 #testimonios h2 {
@@ -92,23 +103,28 @@ blockquote {
     padding: 20px;
     margin: 20px auto;
     max-width: 700px;
-    border-left: 5px solid #1e3a5f;
+    border-left: 5px solid #0B4158;
     font-style: italic;
+    color: #061A24;
+    box-shadow: 0 2px 6px rgba(6, 26, 36, 0.25);
 }
 
 #testimonios p {
     text-align: center;
     margin-bottom: 20px;
     font-weight: bold;
+    color: #061A24;
 }
 
 #contacto {
     padding: 60px 20px;
+    background-color: #1B5E4F;
 }
 
 #contacto h2 {
     text-align: center;
     margin-bottom: 30px;
+    color: #A6D5CA;
 }
 
 form {
@@ -120,33 +136,47 @@ label {
     display: block;
     margin-top: 15px;
     margin-bottom: 5px;
+    color: #A6D5CA;
 }
 
 input,
 textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 2px solid #4B6F76;
     border-radius: 5px;
     font-size: 1rem;
+    background-color: #061A24;
+    color: white;
+    transition: 0.2s;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #A6D5CA;
+    box-shadow: 0 0 8px rgba(166, 213, 202, 0.3);
 }
 
 button {
     margin-top: 20px;
-    background-color: #1e3a5f;
+    background: linear-gradient(135deg, #0B4158 0%, #4B6F76 100%);
     color: white;
     border: none;
     padding: 12px 20px;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 0 4px 10px rgba(6, 26, 36, 0.3);
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: #16304f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(6, 26, 36, 0.4);
 }
 
 footer {
-    background-color: #1e3a5f;
+    background-color: #061A24;
     color: white;
     text-align: center;
     padding: 30px 20px;
@@ -192,5 +222,21 @@ section {
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 15px;
+}
+
+aside {
+    background: linear-gradient(to bottom, #3D2817 0%, #4A3728 100%);
+    padding: 30px 20px;
+    text-align: center;
+    color: #A6D5CA;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+aside p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: white;
 }
 
