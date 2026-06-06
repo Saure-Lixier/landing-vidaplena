@@ -66,10 +66,48 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Source Sans 3', Arial, sans-serif;
+    line-height: 1.7;
     background-color: var(--bg);
     color: var(--text);
+}
+
+h1,
+h2,
+h3,
+nav h2,
+.footer-section h3,
+button,
+a {
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+h2,
+h3 {
+    font-weight: 600;
+}
+
+p,
+label,
+input,
+textarea,
+blockquote,
+.footer-desc,
+.footer-bottom p {
+    font-family: 'Source Sans 3', Arial, sans-serif;
+}
+
+button {
+    font-weight: 600;
+}
+
+nav a {
+    font-weight: 500;
 }
 
 header {
